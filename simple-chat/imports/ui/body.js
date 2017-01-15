@@ -1,10 +1,28 @@
 import { Template } from 'meteor/templating';
 import './body.html';
- import './message.js';
-Template.body.helpers({
-  messages: [
-    { text: 'Hello,' },
-    { text: 'Nice to meet you!' },
-    { text: '<3' },
-  ],
-});
+import './message.js';
+ import { Messages } from '../api/messages.js';
+ Template.body.helpers({
+   messages() {
+     return Messages.find();
+   },
+ });
+ Template.body.events({
+   'submit .new-message'(event) {
+     // Prevent default browser form submit
+     event.preventDefault();
+     // Get value from form element
+     const target = event.target;
+     const text = target.text.value;
+     // Insert a message into the collection
+     Messages.insert({
+       text,
+       createdAt: new Date(), // current time
+   //user information
+     });
+     // Clear form
+     target.text.value = '';
+     // scroll to last message
+     $('.panel-body').scrollTop($('.media-list').height())
+  },
+ });
