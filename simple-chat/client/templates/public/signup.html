@@ -1,16 +1,16 @@
 <template name="signup">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+    <div class="col s12">
       <h4 class="page-header">Sign Up</h4>
       <form id="signup" class="signup">
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
+          <div class="col s12 m6">
             <div class="form-group">
               <label for="firstName">First Name</label>
               <input type="text" name="firstName" class="form-control" placeholder="First Name">
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6">
+          <div class="col s12 m6">
             <div class="form-group">
               <label for="lastName">Last Name</label>
               <input type="text" name="lastName" class="form-control" placeholder="Last Name">
@@ -19,10 +19,7 @@
         </div>
         <div class="form-group">
           <label for="username">Username</label>
-          <div class="input-group username">
-            <div class="input-group-addon">@</div>
-            <input type="text" class="form-control" name="username" placeholder="username">
-          </div>
+          <input type="text" class="form-control" name="username" placeholder="username">
         </div>
         <div class="form-group">
           <label for="emailAddress">Email Address</label>
@@ -33,7 +30,7 @@
           <input type="password" name="password" class="form-control" placeholder="Password">
         </div>
         <div class="form-group">
-          <input type="submit" class="btn btn-success" value="Sign Up">
+          <input type="submit" class="waves-effect waves-light btn" value="Sign Up">
         </div>
       </form>
       <p>Already have an account? <a href="{{pathFor 'login'}}">Log In</a>.</p>

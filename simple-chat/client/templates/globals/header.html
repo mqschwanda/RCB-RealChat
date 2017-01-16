@@ -1,0 +1,12 @@
+<template name="header">
+	<nav>
+		<div class="nav-wrapper">
+			<a href="/messages/general" class="brand-logo">{{brand}}</a>
+			{{#if currentUser}}
+				{{> authenticatedNavigation}}
+			{{else}}
+				{{> publicNavigation}}
+			{{/if}}
+		</div>
+	</nav>
+</template>
