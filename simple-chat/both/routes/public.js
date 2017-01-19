@@ -33,3 +33,10 @@ publicRoutes.route( '/reset-password/:token', {
     BlazeLayout.render( 'default', { yield: 'resetPassword' } );
   }
 });
+
+publicRoutes.route('/map',{
+  name: 'map-view',
+  action(){
+    BlazeLayout.render('default',  { yield: 'mapView' } );
+  }
+});
