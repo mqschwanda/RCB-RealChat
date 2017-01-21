@@ -18,6 +18,8 @@ es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.6.1              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.2.1            # Server-side component of the `meteor shell` command
 
+fourseven:scss
+poetic:materialize-scss
 
 accounts-password
 accounts-base
@@ -26,17 +28,14 @@ audit-argument-checks
 themeteorchef:jquery-validation
 browser-policy
 
-
 themeteorchef:bert
 meteorhacks:ssr
-
 
 kadira:flow-router
 kadira:blaze-layout
 meteorhacks:fast-render
 session
 templating
-fourseven:scss
 reactive-dict
 aldeed:collection2
 momentjs:moment
@@ -44,5 +43,5 @@ alanning:roles
 themeteorchef:seeder
 themeteorchef:commonmark
 risul:moment-timezone
-poetic:materialize-scss
 natestrauser:mapbox
+service-configuration # heroku fix
