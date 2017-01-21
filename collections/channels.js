@@ -17,6 +17,10 @@ let ChannelsSchema = new SimpleSchema({
   'name': { // the display name of channel
     type: String,
     label: 'The display name of channel'
+  },
+  'location': { // the physical location of a channel
+    type: String,
+    label: 'The physical location of a channel'
   }
 });
 // define channel with created schema
