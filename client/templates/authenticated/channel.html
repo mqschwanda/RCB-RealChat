@@ -1,0 +1,27 @@
+<template name="channel">
+  <!-- list all of our channels and direct messages -->
+  {{> sidebar}}
+
+  <div class="conversation">
+    <div id="messages">
+      <div class="messages-list {{#if isLoading}}loading-list{{/if}}">
+        {{#each messages}}
+          <!-- individual message -->
+          {{> message}}
+        {{else}}
+          {{#if isDirect}}
+            <!-- alert that direct message chat history is empty with user -->
+            <p class="alert alert-warning">You haven't said anything to {{chatRoom}} yet...   Don't you know that it goes down in the DM?!</p>
+          {{else}}
+            <!-- alert that channel chat history is empty -->
+            <p class="alert alert-warning">{{capitalize chatRoom}} is pretty quiet...   You should say something...   Just dont be an asshole!</p>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="message-input">
+      <!-- input for the active chat room -->
+      <input name="message" placeholder="Type your message here...   press enter to send!">
+    </div>
+  </div>
+</template>
