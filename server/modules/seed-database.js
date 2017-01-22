@@ -4,19 +4,19 @@ let _seedUsers = () => {
   Seed( 'users', {
     environments: [ 'development', 'staging', 'production' ],
     data: [{
-      username: 'bigguy1991',
-      email: 'admin@admin.com',
+      username: 'yoda',
+      email: 'yoda@gmail.com',
       password: 'password',
       profile: {
-        name: { first: 'Carl', last: 'Winslow' }
+        name: { first: 'Minch', last: 'Yoda' }
       },
       roles: [ 'admin' ]
     },{
-      username: 'beetsfan123',
-      email: 'doug@admin.com',
+      username: 'kitty',
+      email: 'cat@gmail.com',
       password: 'password',
       profile: {
-        name: { first: 'Doug', last: 'Funnie' }
+        name: { first: 'Kitty', last: 'Cat' }
       },
       roles: [ 'admin' ]
     }]
@@ -26,7 +26,7 @@ let _seedUsers = () => {
 let _seedChannels = () => {
   Seed( 'channels', {
     environments: [ 'development', 'staging', 'production' ],
-    data: [ { name: 'general' }, { name: 'general2' }, { name: 'general3' } ]
+    data: [ { name: 'Rutgers Bootcamp' }, { name: 'Talk Shit' }, { name: 'Central Park' }, { name: 'Princeton University' } ]
   });
 };
 
