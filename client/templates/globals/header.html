@@ -1,12 +1,14 @@
 <template name="header">
-	<nav>
-		<div class="nav-wrapper">
-			<a href="/messages/general" class="brand-logo">{{brand}}</a>
-			{{#if currentUser}}
-				{{> authenticatedNavigation}}
-			{{else}}
-				{{> publicNavigation}}
-			{{/if}}
-		</div>
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="/messages/general">{{brand}}<span>{{slogan}}</span></a>
+	    </div>
+      {{#if currentUser}}
+        {{> authenticatedNavigation}}
+      {{else}}
+        {{> publicNavigation}}
+      {{/if}}
+	  </div>
 	</nav>
 </template>

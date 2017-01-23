@@ -9,7 +9,7 @@ body.is-channel .container {
 .sidebar,
 .conversation {
   position: fixed;
-  // top: 52px;
+  top: 52px;
   bottom: 0;
   height: 100%;
 }
@@ -90,7 +90,7 @@ body.is-channel .container {
   .message-input {
     background: #fff;
     position: absolute;
-    bottom: 0;
+    bottom: 52px;
     left: 0;
     right: 0;
     padding: 15px;
@@ -104,8 +104,6 @@ body.is-channel .container {
     border-radius: 3px;
     height: 40px;
     padding: 5px 10px;
-    margin: 0;
-    box-sizing: border-box;
   }
 
   .message-input input:focus {
@@ -116,7 +114,7 @@ body.is-channel .container {
   #messages {
     display: flex;
     overflow: auto;
-    height: calc( 100% - 70px );
+    height: calc( 100% - 122px );
     background: #fff;
     padding: 20px 20px 0;
   }
@@ -162,16 +160,4 @@ body.is-channel .container {
   .message > .body > *:last-child {
     margin-bottom: 0px;
   }
-}
-
-.alert-warning {
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-}
-.alert {
-    padding: 5px 10px;
-    margin-bottom: 15px;
-    border: 1px solid transparent;
-    border-radius: 3px;
 }

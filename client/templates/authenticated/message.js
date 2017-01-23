@@ -6,6 +6,7 @@ Template.message.helpers({
     }
   }
 });
+
 Template.message.events({
   'click a' ( event ) {
     event.preventDefault();

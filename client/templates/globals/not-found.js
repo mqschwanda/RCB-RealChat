@@ -1,5 +1,5 @@
 Template.notFound.helpers({
-  currentPath(){
+  currentPath() {
     return FlowRouter.current().path;
   }
 });
