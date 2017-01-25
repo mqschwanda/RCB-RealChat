@@ -1,4 +1,6 @@
-export default function( containerId ) {
-  let messages = document.getElementById( containerId );
-  setTimeout( () => { messages.scrollTop = messages.scrollHeight; }, 300 );
+export default function(containerId) {
+  // get the container to by html ID
+  let container = document.getElementById(containerId);
+  // scroll the container to the bottom
+  setTimeout(() => { container.scrollTop = container.scrollHeight; }, 300 );
 }

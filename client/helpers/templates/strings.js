@@ -1,17 +1,12 @@
-Template.registerHelper( 'capitalize', ( string ) => {
-  if ( string ) {
-    return string.charAt( 0 ).toUpperCase() + string.slice( 1 );
-  }
+//  capitalize a string
+Template.registerHelper('capitalize', (string) => {
+  if (string) return string.charAt(0).toUpperCase() + string.slice(1);
 });
-
-Template.registerHelper( 'lowercase', ( string ) => {
-  if ( string ) {
-    return string.toLowerCase();
-  }
+// make string lowercase
+Template.registerHelper('lowercase', (string) => {
+  if (string) return string.toLowerCase();
 });
-
-Template.registerHelper( 'parseMarkdown', ( string ) => {
-  if ( string && parseMarkdown ) {
-    return parseMarkdown( string );
-  }
+// parse a string of markdown
+Template.registerHelper('parseMarkdown', (string) => {
+  if (string && parseMarkdown) return parseMarkdown(string);
 });
