@@ -44,4 +44,6 @@ themeteorchef:seeder
 themeteorchef:commonmark
 risul:moment-timezone
 natestrauser:mapbox
+tmeasday:presence # who is typing in an input
 service-configuration # heroku fix
+mizzao:user-status
