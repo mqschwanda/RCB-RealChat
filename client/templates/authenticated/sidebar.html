@@ -14,7 +14,7 @@
     <h5>Direct Messages</h5>
     <ul>
       {{#each user in users}}
-        <li class="{{currentChannel user.username}}">
+        <li class="{{currentChannel user.username}} user-{{user.status}}">
           <a href="/messages/@{{user.username}}">
             {{fullName user.profile.name}}
           </a>

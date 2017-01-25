@@ -97,7 +97,7 @@ body.is-channel .container {
     border-top: 1px solid #eee;
   }
 
-  .message-input input {
+  .message-input textarea {
     display: block;
     width: 100%;
     border: 2px solid #eee;
@@ -106,7 +106,7 @@ body.is-channel .container {
     padding: 5px 10px;
   }
 
-  .message-input input:focus {
+  .message-input textarea:focus {
     outline: 0;
     border-color: #ddd;
   }

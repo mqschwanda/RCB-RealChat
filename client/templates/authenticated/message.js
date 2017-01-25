@@ -1,15 +1,19 @@
 Template.message.helpers({
-  name( userId ) {
-    if ( userId ) {
-      let user = Meteor.users.findOne( userId, { fields: { 'profile.name': 1 } } );
-      return user ? `${ user.profile.name.first } ${ user.profile.name.last }` : '';
+  // find username name for message header
+  name(userId) {
+    if (userId) {
+      // find user from user id
+      let user = Meteor.users.findOne(userId, {fields: {'username': 1}});
+      // return username
+      return user ? `@${user.username}`: '';
     }
   }
 });
 
 Template.message.events({
-  'click a' ( event ) {
+  // make any link open in new window by default
+  'click a' (event) {
     event.preventDefault();
-    window.open( event.target.href, '_blank' );
+    window.open(event.target.href, '_blank');
   }
 });
