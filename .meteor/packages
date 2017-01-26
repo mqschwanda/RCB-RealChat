@@ -47,3 +47,4 @@ natestrauser:mapbox
 tmeasday:presence # who is typing in an input
 service-configuration # heroku fix
 mizzao:user-status
+fortawesome:fontawesome
