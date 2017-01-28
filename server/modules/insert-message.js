@@ -48,24 +48,26 @@ let _assignDestination = (message) => {
 
 // replace all aplha charecters with a poop emoji
 let _talkShit = (message) => {
-  return message.replace( /([a-zA-Z])/g, '💩 ');
+  return message.replace(/([a-zA-Z])/g, '💩 ');
 };
 // add `Meow!` to end of the message
 let _catChat = (message) => {
-  return message.concat( ' MEOW! 🐱');
+  return message.concat(' MEOW! 🐱');
 };
-// customize the message if a channel has a custom function
-let _customChannelSwitch = (message) => {
+// customize the message content if a channel has a custom function
+let _customizeMessage = (message) => {
   // switch the message based on destination
   switch (message.destination) {
     // Talk Shit channel
-    case 'Talk Shit':
-      message.message = _talkShit(message.message); // replace all aplha charecters with a poop emoji
+    // replace all aplha charecters with a poop emoji
+    case 'Talk Shit': message.message = _talkShit(message.message);
       break;
     // Cat Chat channel
-    case 'Cat Chat':
-      message.message = _catChat(message.message); // replace all aplha charecters with a poop emoji
+    // replace all aplha charecters with a poop emoji
+    case 'Cat Chat': message.message = _catChat(message.message);
       break;
+    // default
+    // make no changes to message
     default: return;
   }
 };
@@ -92,7 +94,7 @@ export default function(message) {
   _assignOwnerAndTimestamp(message); // assign owner and timestamp to message object
   if (!_checkIfSelf(message)) { // reutrn a boolean statement that determins if the user is trying to send a message to themselves
     _assignDestination(message); // assign the destination to the message object depending on if it is a channel or direct message
-    _customChannelSwitch(message); // customize the message if a channel has a custom function
+    _customizeMessage(message); // customize the message content if a channel has a custom function
     _cleanUpMessageBeforeInsert(message); // prune message object of unwanted attributes and escape the message of unwanted markdown
     _insertMessage(message); // insert message into the database
   } else {

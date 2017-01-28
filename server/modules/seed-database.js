@@ -1,35 +1,31 @@
 import seed from 'meteor/themeteorchef:seeder';
 
+// seed users collection
 let _seedUsers = () => {
-  Seed( 'users', {
-    environments: [ 'development', 'staging', 'production' ],
+  Seed('users', {
+    // list the environments the channels seed function will be run
+    environments: ['development', 'staging', 'production'],
+    // data to be seeded
     data: [{
-      username: 'yoda',
-      email: 'yoda@gmail.com',
+      username: 'testUser',
+      email: 'testUser@gmail.com',
       password: 'password',
-      profile: {
-        name: { first: 'Minch', last: 'Yoda' }
-      },
-      roles: [ 'admin' ]
-    },{
-      username: 'kitty',
-      email: 'cat@gmail.com',
-      password: 'password',
-      profile: {
-        name: { first: 'Kitty', last: 'Cat' }
-      },
-      roles: [ 'admin' ]
+      profile: {name: {first: 'Test', last: 'Smith'}},
+      roles: ['admin'] // makes the user an administrator
     }]
   });
 };
-
+// seed channels collection
 let _seedChannels = () => {
-  Seed( 'channels', {
-    environments: [ 'development', 'staging', 'production' ],
-    data: [ { name: 'Rutgers Bootcamp' }, { name: 'Talk Shit' }, { name: 'Cat Chat' }, { name: 'Princeton University' } ]
+  Seed('channels', {
+    // list the environments the channels seed function will be run
+    environments: ['development', 'staging', 'production'],
+    // data to be seeded
+    data: [{name: 'General'}, {name: 'Talk Shit'}, {name: 'Cat Chat'}]
   });
 };
 
+// export seed functions
 export default function() {
   _seedUsers();
   _seedChannels();

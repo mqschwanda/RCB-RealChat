@@ -1,36 +1,35 @@
 let template;
 
 let _handleLogin = () => {
-  let email    = template.find( '[name="emailAddress"]' ).value,
-      password = template.find( '[name="password"]' ).value;
-
-  Meteor.loginWithPassword( email, password, ( error ) => {
-    if ( error ) {
-      Bert.alert( error.reason, 'warning' );
-    } else {
-      Bert.alert( 'Logged in!', 'success' );
-    }
+  // get email and password values from html form
+  let email = template.find('[name="emailAddress"]').value,
+      password = template.find('[name="password"]').value;
+  // login to application using form email and password
+  Meteor.loginWithPassword(email, password, (error) => {
+    // display error message to user
+    if (error) Bert.alert(error.reason, 'warning');
+      // display success message to user
+      else Bert.alert('Logged in!', 'success');
   });
 };
-
+// form input validation
 let validation = () => {
   return {
+    // validation rules
     rules: {
       emailAddress: {
-        required: true,
-        email: true
+        required: true, eteor location basedemail: true
       },
-      password: {
-        required: true
-      }
+      password: {required: true}
     },
+    // error messages
     messages: {
       emailAddress: {
-        required: 'Need an email address here.',
-        email: 'Is this email address legit?'
+        required: 'Please enter your email address.',
+        email: 'Please enter a real email address.'
       },
       password: {
-        required: 'Need a password here.'
+        required: 'Please enter your password.'
       }
     },
     submitHandler() { _handleLogin(); }

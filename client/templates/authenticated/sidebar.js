@@ -1,6 +1,6 @@
 Template.sidebar.onCreated(() => {
   let template = Template.instance();
-  template.subscribe('sidebar');
+  template.subscribe('users');
 });
 
 Template.sidebar.helpers({

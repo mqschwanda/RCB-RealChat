@@ -1,3 +1,4 @@
 export default function() {
-  BrowserPolicy.content.allowOriginForAll( '*' );
+  // allow all content types from the specified origin domain.
+  BrowserPolicy.content.allowOriginForAll('*');
 }

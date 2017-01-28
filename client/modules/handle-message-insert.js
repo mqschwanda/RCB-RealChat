@@ -1,9 +1,32 @@
 import setScroll from './set-scroll';
 
+// flag a user as typing a message into a specific channel
+let _handleUserTyping = (message, event, template) => {
+  // // use meteor method to insert message into database
+  // Meteor.call('insertMessage', message, (error) => {
+  //   // show error to user
+  //   if (error) Bert.alert(error.reason, 'danger');
+  //     // reset input value after insert
+  //     else event.target.value = '';
+  // });
+
+};
+
 // insert message into the database
 let _handleInsert = (message, event, template) => {
   // use meteor method to insert message into database
   Meteor.call('insertMessage', message, (error) => {
+    // show error to user
+    if (error) Bert.alert(error.reason, 'danger');
+      // reset input value after insert
+      else event.target.value = '';
+  });
+};
+
+// insert message into the database
+let _handleTyping = (message, event, template) => {
+  // use meteor method to insert message into database
+  Meteor.call('isTyping', message, (error) => {
     // show error to user
     if (error) Bert.alert(error.reason, 'danger');
       // reset input value after insert
@@ -42,4 +65,5 @@ export default function(event, template) {
     // build and insert
     _handleInsert(_buildMessage(template, text), event, template);
   }
+  // else _handleUserTyping();
 }
