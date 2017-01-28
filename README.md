@@ -6,9 +6,9 @@ RealChat lets users within a defined area view send chat messages to each other.
 
 ![login](https://github.com/mqschwanda/RCB-RealChat/blob/master/images/login.PNG?raw=true "Sign up and login")
 
-![channel](/images/channels.png "Chatrooms")
+![channel](https://github.com/mqschwanda/RCB-RealChat/blob/master/images/channels.PNG?raw=true "Chatrooms")
 
-![direct message](/images/dm.png "Users can send direct messages")
+![direct message](https://github.com/mqschwanda/RCB-RealChat/blob/master/images/dm.PNG?raw=true "Users can send direct messages")
 
 ## Prerequisites
 
