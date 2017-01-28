@@ -47,7 +47,7 @@ let _assignDestination = (message) => {
 };
 
 // replace all aplha charecters with a poop emoji
-let _talkShit = (message) => {
+let _talkPoop = (message) => {
   return message.replace( /([a-zA-Z])/g, '💩 ');
 };
 // add `Meow!` to end of the message
@@ -59,8 +59,8 @@ let _customChannelSwitch = (message) => {
   // switch the message based on destination
   switch (message.destination) {
     // Talk Shit channel
-    case 'Talk Shit':
-      message.message = _talkShit(message.message); // replace all aplha charecters with a poop emoji
+    case 'Talk Poop':
+      message.message = _talkPoop(message.message); // replace all aplha charecters with a poop emoji
       break;
     // Cat Chat channel
     case 'Cat Chat':

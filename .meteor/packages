@@ -20,6 +20,7 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 
 fourseven:scss
 twbs:bootstrap
+fortawesome:fontawesome # svg icon set from font awesome
 
 accounts-password
 accounts-base
@@ -47,4 +48,4 @@ natestrauser:mapbox
 tmeasday:presence # who is typing in an input
 service-configuration # heroku fix
 mizzao:user-status
-fortawesome:fontawesome
+mdg:geolocation # get location of the user
