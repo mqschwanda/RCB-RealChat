@@ -40,6 +40,21 @@ body.is-channel .container {
   li {
     font-size: 15px;
   }
+  li[data-isInRange="true"] {
+    .active a, .active a:hover {
+      background: #fff;
+      color: $blue;
+      border-left: none;
+    }
+    a:hover {
+      background: darken( $blue, 10% );
+    }
+  }
+  li[data-isInRange="false"] {
+    a {
+      color: darken( $blue, 20% );
+    }
+  }
 
   a {
     display: block;
@@ -50,15 +65,13 @@ body.is-channel .container {
     border-left: none;
   }
 
-  a:hover {
-    background: darken( $blue, 10% );
-  }
+
 
   .active a,
   .active a:hover {
-    background: #fff;
-    color: $blue;
-    border-left: none;
+    // background: #fff;
+    // color: $blue;
+    // border-left: none;
 
     .unread {
       background: $blue;
