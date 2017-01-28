@@ -4,11 +4,11 @@ RealChat lets users within a defined area view send chat messages to each other.
 
 ##Views
 
-![login](images/login.png "Sign up and login")
+![login](/images/login.png "Sign up and login")
 
-![channel](images/channels.png "Chatrooms")
+![channel](/images/channels.png "Chatrooms")
 
-![direct message](images/dm.png "Users can send direct messages")
+![direct message](/images/dm.png "Users can send direct messages")
 
 ## Prerequisites
 
@@ -93,10 +93,10 @@ git push heroku master
 
 ## Authors
 
-[Mark S](https://github.com/mqschwanda) 
-[Meredith W](https://github.com/Meredith-W)
-[Jessy H](https://github.com/JesseHappel)
-[Stacy T](https://github.com/strentnj)
+* [Mark Q S](https://github.com/mqschwanda) 
+* [Meredith W](https://github.com/Meredith-W)
+* [Jessy H](https://github.com/JesseHappel)
+* [Stacy T](https://github.com/strentnj)
 
 ## Acknowledgments
 
