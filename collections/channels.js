@@ -1,17 +1,9 @@
 // define channels collection in mongo database
 Channels = new Mongo.Collection('channels');
 // allow methods
-Channels.allow({
-  insert: () => false,
-  update: () => false,
-  remove: () => false
-});
+Channels.allow({insert: () => false, update: () => false, remove: () => false});
 // deny methods
-Channels.deny({
-  insert: () => true,
-  update: () => true,
-  remove: () => true
-});
+Channels.deny({insert: () => true, update: () => true, remove: () => true});
 // create schema for channel model
 let ChannelsSchema = new SimpleSchema({
   'name': { // the display name of channel

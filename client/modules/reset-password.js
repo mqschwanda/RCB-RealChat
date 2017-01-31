@@ -1,31 +1,33 @@
 let template;
-
+// handle password reset for user
 let _handleReset = () => {
-  var token    = FlowRouter.getParam( 'token' ),
-      password = template.find( '[name="newPassword"]' ).value;
-
-  Accounts.resetPassword( token, password, ( error ) => {
-    if ( error ) {
-      Bert.alert( error.reason, 'danger' );
-    } else {
-      Bert.alert( 'Password reset!', 'success' );
-    }
+  // get router token and new password from template's form
+  let token = FlowRouter.getParam('token'),
+      password = template.find('[name="newPassword"]').value;
+  // reset password with token and new password
+  Accounts.resetPassword(token, password, (error) => {
+    if (error) Bert.alert(error.reason, 'danger');
+    else Bert.alert('Password reset!', 'success');
   });
 };
-
+// client side validation rules for login form
 let validation = () => {
   return {
+    // validation rules
     rules: {
+      // new password validation
       newPassword: {
         required: true,
         minlength: 6
       },
+      // new password repeated validation
       repeatNewPassword: {
         required: true,
         minlength: 6,
         equalTo: '[name="newPassword"]'
       }
     },
+    // messages to throw if specific validation case does not pass
     messages: {
       newPassword: {
         required: 'Enter a new password, please.',
@@ -36,15 +38,16 @@ let validation = () => {
         equalTo: 'Hmm, your passwords don\'t match. Try again?'
       }
     },
+    // handle submition of form
     submitHandler() { _handleReset(); }
   };
 };
-
-let _validate = ( form ) => {
-  $( form ).validate( validation() );
+// validate form with prebuilt function
+let _validate = (form) => {
+  $(form).validate(validation());
 };
 
-export default function ( options ) {
+export default function (options) {
   template = options.template;
-  _validate( options.form );
+  _validate(options.form);
 }
