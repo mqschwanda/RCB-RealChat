@@ -1,17 +1,9 @@
 // define messages collection in mongo database
-Messages = new Mongo.Collection( 'messages' );
+Messages = new Mongo.Collection('messages');
 // allow methods
-Messages.allow({
-  insert: () => false,
-  update: () => false,
-  remove: () => false
-});
+Messages.allow({insert: () => false, update: () => false, remove: () => false});
 // deny methods
-Messages.deny({
-  insert: () => true,
-  update: () => true,
-  remove: () => true
-});
+Messages.deny({insert: () => true, update: () => true, remove: () => true});
 // create schema for channel model
 let MessagesSchema = new SimpleSchema({
   'channel': { // ID of the channel this message belongs to.
